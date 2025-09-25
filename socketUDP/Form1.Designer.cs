@@ -14,7 +14,7 @@ namespace socketUDP
         private System.Windows.Forms.Label labelEnvoi;
         private System.Windows.Forms.TextBox txtSend;
         private System.Windows.Forms.Label labelRecp;
-        private System.Windows.Forms.ListBox lstRecv;
+        private System.Windows.Forms.TextBox txtRecv;
         private System.Windows.Forms.Button btnCreateBind;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSend;
@@ -43,7 +43,7 @@ namespace socketUDP
             this.labelEnvoi = new System.Windows.Forms.Label();
             this.txtSend = new System.Windows.Forms.TextBox();
             this.labelRecp = new System.Windows.Forms.Label();
-            this.lstRecv = new System.Windows.Forms.ListBox();
+            this.txtRecv = new System.Windows.Forms.TextBox();
             this.btnCreateBind = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
@@ -111,11 +111,13 @@ namespace socketUDP
             this.labelRecp.Size = new System.Drawing.Size(35, 13);
             this.labelRecp.TabIndex = 10;
             this.labelRecp.Text = "Recp.";
-            this.lstRecv.FormattingEnabled = true;
-            this.lstRecv.Location = new System.Drawing.Point(70, 110);
-            this.lstRecv.Name = "lstRecv";
-            this.lstRecv.Size = new System.Drawing.Size(318, 199);
-            this.lstRecv.TabIndex = 11;
+            this.txtRecv.Location = new System.Drawing.Point(70, 110);
+            this.txtRecv.Multiline = true;
+            this.txtRecv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtRecv.ReadOnly = true;
+            this.txtRecv.Name = "txtRecv";
+            this.txtRecv.Size = new System.Drawing.Size(318, 199);
+            this.txtRecv.TabIndex = 11;
             this.btnCreateBind.Location = new System.Drawing.Point(415, 10);
             this.btnCreateBind.Name = "btnCreateBind";
             this.btnCreateBind.Size = new System.Drawing.Size(190, 23);
@@ -159,7 +161,7 @@ namespace socketUDP
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCreateBind);
-            this.Controls.Add(this.lstRecv);
+            this.Controls.Add(this.txtRecv);
             this.Controls.Add(this.labelRecp);
             this.Controls.Add(this.txtSend);
             this.Controls.Add(this.labelEnvoi);
